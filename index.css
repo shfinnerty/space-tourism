@@ -1,0 +1,145 @@
+/* ------------------ */
+/* Custom Properties  */
+/* ------------------ */
+
+:root {
+  --clr-dark: 230 35% 35%;
+  --clr-light: 231 77% 90%;
+  --clr-white: 0 0% 100%;
+}
+
+/* ------------------ */
+/*      RESET         */
+/* ------------------ */
+
+/*  based on Andy Bell Modern CSS Reset  */
+/*  https://piccalil.li/blog/a-more-modern-css-reset/   */
+
+/*  Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*  Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+/*  Remove list styles */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/*  Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/*  Set shorter line heights on headings/interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/*  Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/*  Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/*  Remove animations for people who have turned them off */
+@media (perfers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------ */
+/*   Utility Classes  */
+/* ------------------ */
+
+/* --general classes-- */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+  border: 1px solid red;
+}
+
+/*  Adaptation for screen-reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+/*  --colors--  */
+
+.bg-dark {
+  background-color: hsl(var(--clr-dark));
+}
+.bg-light {
+  background-color: hsl(var(--clr-light));
+}
+.bg-white {
+  background-color: hsl(var(--clr-white));
+}
+
+.text-dark {
+  color: hsl(var(--clr-dark));
+}
+.text-light {
+  color: hsl(var(--clr-light));
+}
+.text-white {
+  color: hsl(var(--clr-white));
+}
