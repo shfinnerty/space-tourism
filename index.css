@@ -132,6 +132,14 @@ select {
   gap: var(--gap, 1rem);
 }
 
+/* Need better explanation of this - the design system - Spacing lesson */
+.flow > *:where(:not(:first-child)) {
+  /* Sets up so there is spacing between items, but not to top item. */
+  /* sets default to 1rem, and can use "--flowspace: ___ as inline property you can set for each item */
+  margin-top: var(--flow-space, 1 rem);
+  border: 1px solid red;
+}
+
 .container {
   padding-inline: 2em;
   margin-inline: auto;
@@ -229,4 +237,17 @@ select {
 .fs-700,
 .fs-600 {
   line-height: 1.1;
+}
+
+.numbered-title {
+  font-family: var(--ff-sans-cond);
+  font-size: var(--fs-600);
+  text-transform: uppercase;
+  letter-spacing: 4.72;
+}
+
+.numbered-title span {
+  margin-right: 0.5em;
+  font-weight: 700;
+  color: hsl(var(--clr-white) / 0.25);
 }
