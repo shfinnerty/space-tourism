@@ -137,7 +137,7 @@ select {
   /* Sets up so there is spacing between items, but not to top item. */
   /* sets default to 1rem, and can use "--flowspace: ___ as inline property you can set for each item */
   margin-top: var(--flow-space, 1 rem);
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .container {
@@ -250,4 +250,37 @@ select {
   margin-right: 0.5em;
   font-weight: 700;
   color: hsl(var(--clr-white) / 0.25);
+}
+
+/* ------------------ */
+/* Componenets        */
+/* ------------------ */
+
+.large-button{
+  position: relative;
+  z-index: 1;
+  padding: 0 2em;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  aspect-ratio: 1;
+}
+
+.large-button::after{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background: hsl( var(--clr-white) / .15);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 500ms linear, 500ms ease-in-out;
+}
+
+.large-button:hover::after,
+.large-button:focus::after {
+  transform: scale(1.5);
+  opacity: 1;
 }
