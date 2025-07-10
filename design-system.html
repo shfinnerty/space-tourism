@@ -140,25 +140,39 @@
           <span class="text-light">03</span> Interactive Elements
         </h2>
 
-        <div class="flex">
-          <p class="numbered-title ff-sans-cond">00 <span>Active</span></p>
-          <p class="numbered-title">01 <span>Hovered</span></p>
-          <p class="numbered-title">02 <span>Idle</span></p>
+      <!-- navigation -->
+        <div class="flex" style="flex-direction: column; align-items: center;">
+          <nav>
+            <ul class="primary-navigation flex underline-indicator">
+              <li class="active"> <a href="#" class="uppercase text-white letter-spacing-2"><span class="text-white">00</span> Active</a>
+              <li class="hover"> <a href="#" class="uppercase text-white letter-spacing-2"><span class="text-white">01</span> Hovered</a>
+              <li> <a href="#" class="uppercase text-white letter-spacing-2"><span class="text-white">02</span> Idle</a>
+            </ul>
+          </nav>
+          <p class="text-light fs-400">Differenet States of Navigation Bar</p>
         </div>
-        <p class="text-light fs-400">Differenet States of Navigation Bar</p>
 
-        <div class="flex">
+        <div class="flex" style="flex-direction: column; align-items: center; margin-top: 2rem;">
+          <!-- tabs -->
+          <div class="tab-list flex underline-indicator">
+            <button class="active text-white bg-dark uppercase ff-sans-cond letter-spacing-2">Moon</button>
+            <button class="hover text-light bg-dark uppercase ff-sans-cond letter-spacing-2">Mars</button>
+            <button class="text-light bg-dark uppercase ff-sans-cond letter-spacing-2">Europa</button>
+          </div>
+          <p class="text-light">Tabs &#40Active, Hovered, Idle&#41</p>
+        </div>
+        
+        <div class="flex" style="justify-content: center;">
           <div>
             <!-- explore button -->
-             <a href="#" class="large-button bg-white text-dark fs-600 ff-serif uppercase" style="text-decoration: none;">Explore</a>
-             <a href="#" class="large-button bg-light text-dark fs-600 ff-serif uppercase" style="text-decoration: none;">Explore</a>
+             <a href="#" class="large-button bg-white text-dark fs-600 ff-serif uppercase" style="margin-top: 5rem">Explore</a>
 
-            <div style="margin-bottom: 50px;"></div>
+            <div style="margin-bottom: 50px;">  </div>
 
           </div>
-          <div>
-            <!-- tabs -->
-          </div>
+
+
+
           <div>
             <!-- dots -->
           </div>
