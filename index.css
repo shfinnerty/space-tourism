@@ -132,12 +132,12 @@ select {
   gap: var(--gap, 1rem);
 }
 
-/* Need better explanation of this - the design system - Spacing lesson */
+/* Smart re-usable verticla spacing utility */
 .flow > *:where(:not(:first-child)) {
   /* Sets up so there is spacing between items, but not to top item. */
   /* sets default to 1rem, and can use "--flowspace: ___ as inline property you can set for each item */
   margin-top: var(--flow-space, 1 rem);
-  /* border: 1px solid red; */
+
 }
 
 .container {
@@ -318,4 +318,20 @@ select {
 
 .tab-list {
   --gap: 2.5rem; 
+}
+
+.dot-indicators > * {
+  padding: 0.5em;
+  border-radius: 50%;
+  border: 0;
+  background-color: hsl(var(--clr-white) / 0.25);
+  cursor: pointer;
+}
+
+.dot-indicators > .active {
+  background-color: hsl(var(--clr-white));
+}
+
+.dot-indicators > .hover {
+  background-color: hsl(var(--clr-white) / 0.5);
 }
