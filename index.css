@@ -145,6 +145,24 @@ select {
   max-width: 80rem;
 }
 
+/* Need to better understand this process of grid layout... */
+.grid-container {
+  display: grid;
+  gap: var(--container-gap, 2rem);
+  grid-template-columns: minmax(2e, 1fr) repeat(2, minmax(0, 40rem)) minmax(
+      2em,
+      1fr
+    );
+}
+
+.grid-container > *:first-child {
+  grid-column: 2;
+}
+
+.grid-container > *:last-child {
+  grid-column: 3;
+}
+
 /*  Adaptation for screen-reader only */
 .sr-only {
   position: absolute;
